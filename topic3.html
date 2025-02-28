@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Site Scripting (XSS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Sets the header and description of webpage -->
+    <header>
+        <h1>Cross-Site Scripting (XSS)</h1>
+        <p>Injecting malicious scripts into webpages.</p>
+    </header>
+    <!-- Links to the various vulnerability pages -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topic1.html">Broken Authentication</a></li>
+            <li><a href="topic2.html">SQL Injection</a></li>
+            <li><a href="topic3.html">Cross-Site Scripting</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+     <!-- Vulnerability information -->
+    <main>
+        <h2>Preventing Cross-Site Scripting (XSS)</h2>
+        <p>A cross-site scripting (XSS) attack is a code injection that allows hackers to insert malicious scripts into a website. .</p>
+        <img src="xss example.png" alt="XSS Example" width="500" height="600">
+
+        <h3>Mitigation Techniques</h3>
+        <ul>
+            <li>Escape user input</li>
+            <li>Implement Content Security Policy (CSP)</li>
+            <li>Use secure cookies</li>
+            <li>Implement web application firewall</li>
+        </ul>
+    </main>
+</body>
+</html>
