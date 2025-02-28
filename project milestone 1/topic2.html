@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header information -->
+    <header>
+        <h1>SQL Injection</h1>
+        <p>One of the common and dangerous web vulnerabilities which involve web hacking.</p>
+    </header>
+ <!-- Links to the various vulnerability pages -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topic1.html">Broken Authentication</a></li>
+            <li><a href="topic2.html">SQL Injection</a></li>
+            <li><a href="topic3.html">Cross-Site Scripting</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+<!-- Information on SQL vulnerability-->
+    <main>
+        <h2>What is SQL Injection?</h2>
+        <p>SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.</p>
+
+        <h2>SQL Injection Prevention</h2>
+        <ul>
+            <li>Use Prepared Statements</li>
+            <li>Implement Web Application Firewalls (WAFs)</li>
+            <li>Sanitize User Inputs</li>
+            <li> Usage of Properly Constructed Stored Procedures</li>
+        </ul>
+
+        <h2>Example of a Vulnerable SQL Query</h2>
+        <pre>
+            SELECT * FROM users WHERE username = 'admin' AND password = 'password';
+        </pre>
+    </main>
+
+</body>
+</html>
