@@ -1,0 +1,31 @@
+/* background color and font style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* style header*/
+header {
+    background: #004c99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* link style*/
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+/* link style*/
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+/* link color */
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
