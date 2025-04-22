@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <!-- Sets the header and description of webpage -->
+    <!-- Header Section -->
     <header>
         <h1>Cross-Site Scripting (XSS)</h1>
         <p>Injecting malicious scripts into webpages.</p>
     </header>
-    <!-- Links to the various vulnerability pages -->
+
+    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,19 +24,47 @@
             <li><a href="references.html">References</a></li>
         </ul>
     </nav>
-     <!-- Vulnerability information -->
+
+    <!-- Main Content Section -->
     <main>
         <h2>Preventing Cross-Site Scripting (XSS)</h2>
         <p>A cross-site scripting (XSS) attack is a code injection that allows hackers to insert malicious scripts into a website.</p>
         <img src="xss example.png" alt="XSS Example" width="500" height="600">
-    <!-- Picture of vulnerability ^ -->
+        
+        <h3>What is XSS?</h3>
+        <p>XSS allows attackers to execute malicious scripts in the context of the user's browser, potentially stealing sensitive information like cookies or session tokens.</p>
+
         <h3>Mitigation Techniques</h3>
         <ul>
-            <li>Escape user input</li>
-            <li>Implement Content Security Policy (CSP)</li>
-            <li>Use secure cookies</li>
-            <li>Implement web application firewall</li>
+            <li><strong>Escape User Input</strong>: Ensure that user inputs are properly sanitized before being rendered on a webpage.</li>
+            <li><strong>Implement Content Security Policy (CSP)</strong>: Define which domains the browser can load resources from, helping to mitigate malicious scripts.</li>
+            <li><strong>Use Secure Cookies</strong>: Set the HttpOnly and Secure flags on cookies to prevent them from being accessed by malicious scripts.</li>
+            <li><strong>Web Application Firewall (WAF)</strong>: Deploy a WAF to monitor and filter incoming HTTP requests for potential malicious payloads.</li>
         </ul>
+
+        <h3>Real-World Example</h3>
+        <p>In 2005, a MySpace worm used XSS to spread a self-replicating code. The attacker leveraged XSS to insert a malicious script into user profiles, which then spread to other profiles as users interacted with the site.</p>
+
+        <h3>Interactive Demonstration</h3>
+        <p>Below is a safe, controlled demonstration of how XSS can occur. (Make sure to explain any warnings or safe practices before proceeding.)</p>
+        <textarea id="xssExample" placeholder="Try injecting a simple script here"></textarea>
+        <button onclick="alertXSS()">Check XSS Payload</button>
+        <script>
+            function alertXSS() {
+                var userInput = document.getElementById("xssExample").value;
+                if (userInput.includes("<script>")) {
+                    alert("Potential XSS detected!");
+                } else {
+                    alert("No XSS detected.");
+                }
+            }
+        </script>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Website Security Awareness. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+

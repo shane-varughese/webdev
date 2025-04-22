@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Web Application Security Quiz</h1>
         <p>Test your knowledge of web application security best practices!</p>
     </header>
 
+    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,50 +25,54 @@
         </ul>
     </nav>
 
+    <!-- Main Content Section -->
     <main>
-        <h2>Self-Assessment Quiz</h2>
-        <form id="quizForm">
-            <!-- Multiple Choice 1-->
-            <p>1. What is a common vulnerability related to authentication?</p>
-            <input type="radio" name="q1" value="A"> A. SQL Injection <br>
-            <input type="radio" name="q1" value="B"> B. Cross-Site Scripting <br>
-            <input type="radio" name="q1" value="C"> C. Broken Authentication <br>
-            <input type="radio" name="q1" value="D"> D. DDoS Attacks <br>
+        <div class="quiz-container">
+            <h2>Self-Assessment Quiz</h2>
+            <form id="quizForm">
+                <!-- Multiple Choice 1-->
+                <p>1. What is a common vulnerability related to authentication?</p>
+                <input type="radio" name="q1" value="A"> A. SQL Injection <br>
+                <input type="radio" name="q1" value="B"> B. Cross-Site Scripting <br>
+                <input type="radio" name="q1" value="C"> C. Broken Authentication <br>
+                <input type="radio" name="q1" value="D"> D. DDoS Attacks <br>
 
-            <!-- Multiple Choice 2 -->
-            <p>2. How can SQL Injection be prevented?</p>
-            <input type="radio" name="q2" value="A"> A. Using prepared statements <br>
-            <input type="radio" name="q2" value="B"> B. Disabling JavaScript <br>
-            <input type="radio" name="q2" value="C"> C. Storing passwords in plain text <br>
-            <input type="radio" name="q2" value="D"> D. Using weak credentials <br>
+                <!-- Multiple Choice 2 -->
+                <p>2. How can SQL Injection be prevented?</p>
+                <input type="radio" name="q2" value="A"> A. Using prepared statements <br>
+                <input type="radio" name="q2" value="B"> B. Disabling JavaScript <br>
+                <input type="radio" name="q2" value="C"> C. Storing passwords in plain text <br>
+                <input type="radio" name="q2" value="D"> D. Using weak credentials <br>
 
-            <!-- Multiple Choice 3-->
-            <p>3. What is the main purpose of Cross-Site Scripting (XSS)?</p>
-            <input type="radio" name="q3" value="A"> A. Injecting malicious SQL queries <br>
-            <input type="radio" name="q3" value="B"> B. Stealing user data via injected scripts <br>
-            <input type="radio" name="q3" value="C"> C. Overloading a server with traffic <br>
-            <input type="radio" name="q3" value="D"> D. Encrypting user passwords <br>
+                <!-- Multiple Choice 3-->
+                <p>3. What is the main purpose of Cross-Site Scripting (XSS)?</p>
+                <input type="radio" name="q3" value="A"> A. Injecting malicious SQL queries <br>
+                <input type="radio" name="q3" value="B"> B. Stealing user data via injected scripts <br>
+                <input type="radio" name="q3" value="C"> C. Overloading a server with traffic <br>
+                <input type="radio" name="q3" value="D"> D. Encrypting user passwords <br>
 
-            <!-- Fill-in-the-Blank 1 -->
-            <p>4. Fill in the blank: The best way to protect against SQL injection is by using _______.</p>
-            <input type="text" id="q4" name="q4" placeholder="Your answer here">
+                <!-- Fill-in-the-Blank 1 -->
+                <p>4. Fill in the blank: The best way to protect against SQL injection is by using _______.</p>
+                <input type="text" id="q4" name="q4" placeholder="Your answer here">
 
-            <!-- Multiple Choice 4-->
-            <p>5. Select all methods used to prevent XSS attacks:</p>
-            <input type="checkbox" name="q5" value="A"> A. Input validation <br>
-            <input type="checkbox" name="q5" value="B"> B. Storing passwords in plain text <br>
-            <input type="checkbox" name="q5" value="C"> C. Content Security Policy (CSP) <br>
-            <input type="checkbox" name="q5" value="D"> D. Escaping user input <br>
+                <!-- Multiple Choice 4-->
+                <p>5. Select all methods used to prevent XSS attacks:</p>
+                <input type="checkbox" name="q5" value="A"> A. Input validation <br>
+                <input type="checkbox" name="q5" value="B"> B. Storing passwords in plain text <br>
+                <input type="checkbox" name="q5" value="C"> C. Content Security Policy (CSP) <br>
+                <input type="checkbox" name="q5" value="D"> D. Escaping user input <br>
 
-            <!-- Submit & Restart Buttons -->
-            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
-            <button type="button" onclick="resetQuiz()">Restart</button>
-        </form>
+                <!-- Submit & Restart Buttons -->
+                <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+                <button type="button" onclick="resetQuiz()">Restart</button>
+            </form>
 
-        <h3 id="result"></h3>
-        <div id="detailedResult"></div>
+            <h3 id="result"></h3>
+            <div id="detailedResult"></div>
+        </div>
     </main>
 
     <script src="quiz.js"></script>
 </body>
 </html>
+

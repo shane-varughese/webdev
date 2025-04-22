@@ -6,14 +6,15 @@
     <title>Broken Authentication</title>
     <link rel="stylesheet" href="styles.css">
 </head>
- <!-- Header information -->
 <body>
+    <!-- Header section -->
     <header>
         <h1>Broken Authentication</h1>
         <p>How weak authentication mechanisms can lead to account compromise.</p>
     </header>
+
+    <!-- Navigation bar -->
     <nav>
-         <!-- Links to the various vulnerability pages -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="topic1.html">Broken Authentication</a></li>
@@ -23,41 +24,55 @@
             <li><a href="references.html">References</a></li>
         </ul>
     </nav>
-     <!-- Vulnerability information  -->
+
+    <!-- Main content section -->
     <main>
-        <h2>What is Broken Authentication?</h2>
-        <p>Broken authentication is a vulnerability that allows attackers to impersonate users on an application. This can happen when attackers gain access to user passwords, session tokens, or other account information. </p>
-        <img src="broken auth.png" alt="Broken Authentication Example" width="500" height="600">
-        <!-- Picture of vulnerability ^-->
-         
-        <h3>Common Causes</h3>
-        <ul>
-            <li>Weak passwords</li>
-            <li>Session hijacking</li>
-            <li>Lack of multi-factor authentication (MFA)</li>
-            <li>Credential Stuffing</li>
-        </ul>
-        <!-- Table format for techniques -->          
-        <h3>Prevention Techniques</h3>
-        <table border="1">
-            <tr>
-                <th>Technique</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Enforce MFA</td>
-                <td>Adds an extra layer of security beyond passwords.</td>
-            </tr>
-            <tr>
-                <td>Secure session management</td>
-                <td>Uses secure cookies and session expiration mechanisms.</td>
-            </tr>
-            <tr>
-                <td>Strong and Unique Password Creation</td>
-                <td>Password should contain: 16 characters, combination of uppercase and lowercase letters, and should be different from past passwords.</td>
-            </tr>
-        </table>
+        <section>
+            <h2>What is Broken Authentication?</h2>
+            <p>Broken authentication is a vulnerability that allows attackers to impersonate users on an application. This can happen when attackers gain access to user passwords, session tokens, or other account information.</p>
+            <img src="broken auth.png" alt="Broken Authentication Example" class="responsive-img">
+
+            <h3>Common Causes</h3>
+            <ul>
+                <li>Weak passwords</li>
+                <li>Session hijacking</li>
+                <li>Lack of multi-factor authentication (MFA)</li>
+                <li>Credential Stuffing</li>
+            </ul>
+
+            <h3>Prevention Techniques</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Technique</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enforce MFA</td>
+                            <td>Adds an extra layer of security beyond passwords.</td>
+                        </tr>
+                        <tr>
+                            <td>Secure session management</td>
+                            <td>Uses secure cookies and session expiration mechanisms.</td>
+                        </tr>
+                        <tr>
+                            <td>Strong and Unique Password Creation</td>
+                            <td>Password should contain: 16 characters, combination of uppercase and lowercase letters, and should be different from past passwords.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Web Application Security Project</p>
+    </footer>
 </body>
 </html>
+
 

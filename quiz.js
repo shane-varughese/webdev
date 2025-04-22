@@ -18,13 +18,20 @@ function submitQuiz() {
     let q2 = document.querySelector('input[name="q2"]:checked');
     let q3 = document.querySelector('input[name="q3"]:checked');
     let q4 = document.getElementById("q4").value.trim().toLowerCase();
-    
+
+    // Check the answer for q1
     if (q1 && q1.value === answers.q1) score++;
+    
+    // Check the answer for q2
     if (q2 && q2.value === answers.q2) score++;
+    
+    // Check the answer for q3
     if (q3 && q3.value === answers.q3) score++;
+    
+    // Check the answer for q4
     if (q4 === answers.q4) score++;
 
-    // Checking multiple-choice 
+    // Checking multiple-choice for q5
     let q5Answers = document.querySelectorAll('input[name="q5"]:checked');
     let selectedQ5 = Array.from(q5Answers).map(input => input.value);
     if (arraysEqual(selectedQ5, answers.q5)) score++;
@@ -35,7 +42,7 @@ function submitQuiz() {
     resultMessage += (score >= passThreshold) ? "You passed!" : "Try again!";
     document.getElementById("result").innerHTML = resultMessage;
 
-    // Detailed results
+    // Detailed results for the user
     resultDetails += `<p>1. Correct Answer: ${answers.q1} (Broken Authentication)</p>`;
     resultDetails += `<p>2. Correct Answer: ${answers.q2} (Using prepared statements)</p>`;
     resultDetails += `<p>3. Correct Answer: ${answers.q3} (Stealing user data via scripts)</p>`;
@@ -56,3 +63,4 @@ function resetQuiz() {
 function arraysEqual(a, b) {
     return a.sort().toString() === b.sort().toString();
 }
+

@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header information -->
+    <!-- Header section -->
     <header>
         <h1>SQL Injection</h1>
-        <p>One of the common and dangerous web vulnerabilities which involve web hacking.</p>
+        <p>One of the most common and dangerous web vulnerabilities involving unauthorized access to databases.</p>
     </header>
- <!-- Links to the various vulnerability pages -->
+
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -23,27 +24,31 @@
             <li><a href="references.html">References</a></li>
         </ul>
     </nav>
-<!-- Information on SQL vulnerability-->
+
+    <!-- Main content section -->
     <main>
-        <h2>What is SQL Injection?</h2>
-        <p>SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.</p>
+        <section>
+            <h2>What is SQL Injection?</h2>
+            <p>SQL injection typically occurs when user input is improperly handled, allowing attackers to inject SQL code into a query. This can lead to unauthorized access, data leakage, or even full system compromise.</p>
 
-        <!-- Picture of vulnerability -->
-        <img src="sql.png" alt="SQL Injection Example" width="500" height="600">
+            <img src="sql.png" alt="SQL Injection Example" class="responsive-img">
 
-        <h2>SQL Injection Prevention</h2>
-        <ul>
-            <li>Use Prepared Statements</li>
-            <li>Implement Web Application Firewalls (WAFs)</li>
-            <li>Sanitize User Inputs</li>
-            <li> Usage of Properly Constructed Stored Procedures</li>
-        </ul>
+            <h3>SQL Injection Prevention</h3>
+            <ul>
+                <li>Use Prepared Statements</li>
+                <li>Implement Web Application Firewalls (WAFs)</li>
+                <li>Sanitize User Inputs</li>
+                <li>Use Properly Constructed Stored Procedures</li>
+            </ul>
 
-        <h2>Example of a Vulnerable SQL Query</h2>
-        <pre>
-            SELECT * FROM users WHERE username = 'admin' AND password = 'password';
-        </pre>
+            <h3>Example of a Vulnerable SQL Query</h3>
+            <pre><code>SELECT * FROM users WHERE username = 'admin' AND password = 'password';</code></pre>
+        </section>
     </main>
 
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Web Application Security Project</p>
+    </footer>
 </body>
 </html>
